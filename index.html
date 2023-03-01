@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Order Form</title>
+</head>
+<body onload="urunAdediDoldur(); urunTaksidiDoldur();">
+      <h1>Parfümeri Ürünleri Sipariş Formu</h1>
+      <form action="#" id="formUrun">
+            <label for="urunTipi">Ürün Tipi seçimini yapınız.</label>
+            <span>
+                  <input type="radio" name="urunTipi" id="erkekUrunleri" value="E" onchange="urunleriGetir();">
+                  <label for="erkekUrunleri">Erkek Urunleri</label>
+                  <input type="radio" name="urunTipi" id="kadinÜrünleri" value="K" onchange="urunleriGetir();">
+                  <label for="kadinUrunleri">Kadın Urunleri</label>
+            </span>
+            <label for="urunListesi">Ürün seçimi yapınız.</label>
+            <select name="" id="urunListesi" size="4">
+                  <!-- BOŞ LİSTE -->
+            </select>
+            <label for="urunAdedi">Ürün Adedini Seçiniz</label>
+            <select name="" id="urunAdedi">
+
+                     <!-- BOŞ LİSTE -->
+            </select>
+            <label for="urunTaksidi">Ürün Taksidini Seçiniz</label>
+            <select name="" id="urunTaksidi">
+
+                     <!-- BOŞ LİSTE -->
+            </select>
+
+            <input type="button" value="hesapla" id="btnAraToplam" onclick="hesapla();">
+
+            <label for="txtAraToplam">Ara Toplam Tutarı</label>
+            <input type="text" name="" id="txtAraToplam">
+            <label for="txtKargo">Kargo Ücreti</label>
+            <input type="text" name="" id="txtKargo" disabled>
+      </form>
+      <h5 id="sonuc"></h5>
+      <script src="main.js"></script>
+</body>
+</html>
